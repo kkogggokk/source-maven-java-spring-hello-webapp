@@ -1,8 +1,6 @@
 // 실습2-7. 파이프라인 + Maven + Tomcat 
 pipeline{
-    agent {
-        label "jenkins-node"
-    }
+    agent any
 
     triggers { // 젠킨스 트리가있는지 젠킨스는 모름. 따라서 한번은 [지금빌드]를 눌러줘야 젠킨스에서 트리거 확인 가능 
         pollSCM('* * * * *')
